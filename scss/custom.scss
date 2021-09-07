@@ -1,0 +1,134 @@
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+$redes: (
+        facebook:  #3a5795,
+        youtube: #e90e0e,
+        instagram:#b11b7f,
+        twitter: #55acee,
+);
+i
+{ 
+    color: antiquewhite;
+} 
+
+@each $red, $color in $redes {
+    .btn--#{$red} {
+        background-color: $color;
+    }
+}
+
+.up:hover,
+.up:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    transform: translateY(-0.5em);
+}
+
+@each $button, $colo in $colors {
+    .#{$button} {
+        --color: #{$colo};
+        --hover: #{adjust-hue($colo, 45deg)};
+        }
+    }
+
+button {  
+        color: var(--color);
+        transition: 0.25s;
+        
+        &:hover,
+        &:focus { 
+        border-color: var(--hover);
+        color: rgb(32, 3, 3);
+        }
+    }
+
+/** Mixin **/
+@mixin nth-animation-delay($items: 3, $time: 0.1s) {
+    @for $i from 1 through $items {
+        &:nth-child(#{$i}) {   
+        animation-delay: $time * $i; 
+        }
+    }
+}
+
+@mixin contenido() {
+    z-index: 10;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: left;
+    }
+
+/** Animacion **/
+    @keyframes slide-up {
+    0% { opacity: 0; transform: translate3d(0, 100%, 0); }
+    90% { opacity: 1; }
+    100% { transform: translate3d(0, 0, 0); }
+}
+/** Estilos basico **/
+.title {
+    @include contenido();
+    overflow: hidden;
+    h2 {
+        font-size: 30px;
+        span {
+        @include nth-animation-delay(3, .3s);
+        display: inline-block;
+        animation: slide-up .8s ease-in-out both;
+        }
+    }
+}
+
+.title {
+    @include contenido();
+    overflow: hidden;
+    p {
+        font-size: 20px;
+        span {
+        @include nth-animation-delay(3, .3s);
+        display: inline-block;
+        animation: slide-up .8s ease-in-out both;
+        }
+    }
+}
+
+.portada
+{
+    margin: 0;
+    padding: 0;
+    font-size: larger;
+}
+
+
+.inicio
+{
+    animation-duration: 3s;
+    animation-name: inicio;
+    background-image: url(../assets/fondoAcerca.jpg);
+}
+
+@keyframes inicio
+{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+
+.h-flipSide-360{
+    transition: .5s, color .10s;
+        -webkit-transition: .5s, color .10s;
+        -moz-transition: .5s, color .10s;
+}
+.h-flipSide-360:hover{
+    transform: rotateY(360deg);
+        -webkit-transform: rotateY(360deg);
+        -moz-transform: rotateY(360deg);
+}
+
+

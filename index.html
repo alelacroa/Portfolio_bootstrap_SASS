@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/c04192e314.js" crossorigin="anonymous"></script>
+    <title>Ejercicio16</title>
+    <link rel="icon" href="assets/logo_b.png">
+</head>
+<body>
+    <div id="grilla">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-secondary bg-opacity-25">
+            <div class="container-fluid">
+              <h1 class="portada">
+              <a class="navbar-brand" href="#">
+                <i class="fab fa-battle-net"></i>Soluciones digitales</a>
+              </h1>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active text-black" aria-current="page" href="sections/acerca.html">Acerca de mí</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-black" style="float:right;" onclick="loadModal();" href="#">Contacto</a>
+                  </li>
+                  <div id="myModal" class="modal hide fade" role="dialog">
+                    <div class="modal-dialog">
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Contacto</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <form>
+                            <div class="mb-3">
+                              <label for="recipient-name" class="col-form-label">Nombre:</label>
+                              <input type="text" class="form-control" id="recipient-name">
+                            </div>
+                            <div class="mb-3">
+                              <label for="recipient-name" class="col-form-label">Mail:</label>
+                              <input type="text" class="form-control" id="recipient-name">
+                            </div>
+                            <div class="mb-3">
+                              <label for="message-text" class="col-form-label">Mensaje:</label>
+                              <textarea class="form-control" id="message-text"></textarea>
+                              <button type="reset" class="btn btn-danger m-2">Limpiar</button>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="modal-footer">
+                          
+                          <button type="button" class="btn gray up" data-bs-dismiss="modal">Cerrar</button>
+                          <button type="button" class="btn blue up">Enviar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-black" href="sections/proyectos.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Trabajos
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item text-black" href="sections/skills.html">Skills</a>
+                        <a class="dropdown-item" href="sections/proyectos.html">Proyectos</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <section>
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/desarrollo.jpg" class="d-block w-100" alt="">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="text-white text-uppercase bg-secondary bg-opacity-75 " >Desarrollo web multiplataforma</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="assets/desarrollo2.jpg" class="d-block w-100" alt="">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="text-white text-uppercase bg-secondary bg-opacity-75">Tecnologias que se adaptan a tus necesidades</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="assets/desarrollo3.jpg" class="d-block w-100" alt="">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="text-white text-uppercase bg-secondary bg-opacity-75">Aplicaciones moviles</h5>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </section>
+    <footer class="text-center text-lg-start" style="background-color: #89c2bf;">
+      <div class="container d-flex justify-content-center py-5">
+        <button type="button" class="up btn--facebook btn-lg btn-floating mx-2">
+          <i class="fab fa-facebook"></i>
+        </button>
+        <button type="button" class="up btn--youtube btn-lg btn-floating mx-2 ">
+          <i class="fab fa-youtube"></i>
+        </button>
+        <button type="button" class="up btn--instagram btn-lg btn-floating mx-2">
+          <i class="fab fa-instagram"></i>
+        </button>
+        <button type="button" class="up btn--twitter btn-lg btn-floating mx-2">
+          <i class="fab fa-twitter"></i>
+        </button>
+      </div>
+  
+      <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2021 Copyright:
+        <a class="text-white" href="#">Alejandro Carrizo</a>
+      </div>
+    </footer>
+    </div>  
+    <script src="/bootstrap/dist/js/bootstrap.js"></script> 
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+    <script>
+      function loadModal(){
+        $('#myModal').removeClass("hide").modal('show');}
+    </script>
+    <script>
+        $( document ).ready(function(){
+    $('.carousel').carousel({
+        interval: 1750
+      })
+    })
+  </script>
+</body>
+</html>
